@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   line-height: 1.4;
   font-family: "Nanum Gothic", sans-serif;
+  height: 3000px;
 }
 img {
   display: block;
@@ -17,11 +18,13 @@ a {
   width: 1100px;
   margin: 0 auto;
   position: relative;
-  display: flex;
 }
 
 /* HEADER */
 header {
+  position: fixed;
+  top: 0px;
+  width: 100%;
   background-color: #f6f6f6;
   border-bottom: 1px solid #c8c8c8;
 }
@@ -129,9 +132,6 @@ header .main-menu {
   display: flex;
 }
 
-header .main-menu .item {
-}
-
 header .main-menu .item .item__name {
   padding: 10px 20px 34px 20px;
   font-family: Arial, sans-serif;
@@ -160,8 +160,8 @@ header .main-menu .item .item__contents .contents__menu {
 }
 
 header .main-menu .item .item__contents .contents__menu > ul {
-  display: flex;
   padding: 20px 0;
+  display: flex;
 }
 
 header .main-menu .item .item__contents .contents__menu > ul > li {
@@ -181,6 +181,10 @@ header .main-menu .item .item__contents .contents__menu > ul > li ul li {
   cursor: pointer;
 }
 
+header .main-menu .item .item__contents .contents__menu > ul > li ul li:hover {
+  color: #669900;
+}
+
 header .main-menu .item .item__contents .contents__texture {
   padding: 26px 0;
   font-size: 12px;
@@ -195,4 +199,18 @@ header .main-menu .item .item__contents .contents__texture h4 {
 header .main-menu .item .item__contents .contents__texture p {
   color: #64a70b;
   margin: 4px 0 14px;
+}
+
+header .badges {
+  position: absolute;
+  top: 132px;
+  right: 12px;
+}
+
+header .badges .badge {
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 12px;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
 }
