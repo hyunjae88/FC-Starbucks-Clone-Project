@@ -180,11 +180,14 @@ header .sub-menu ul.menu li a:hover {
   color: #000;
 }
 
+/* 높이와 하위 항목 position absolute 지정을 위한 position relative 지정 */
 header .sub-menu .search {
   height: 34px;
   position: relative;
 }
 
+/* 입력 창 디자인 설정 */
+/* 입력창 클릭시 창 확장을 위한 transition 적용 */
 header .sub-menu .search input {
   width: 36px;
   height: 34px;
@@ -198,11 +201,13 @@ header .sub-menu .search input {
   transition: width 0.4s;
 }
 
+/* 입력창 focus된 경우 width 확장 */
 header .sub-menu .search input:focus {
   width: 190px;
   border-color: #669900;
 }
 
+/* 검색 아이콘 디자인 설정 */
 header .sub-menu .search .material-icons {
   height: 24px;
   position: absolute;
@@ -213,6 +218,7 @@ header .sub-menu .search .material-icons {
   transition: 0.4s;
 }
 
+/* 검색아이콘 사라지도록 설정 */
 header .sub-menu .search.focused .material-icons {
   opacity: 0;
 }
@@ -294,12 +300,21 @@ header .main-menu .item .item__contents .contents__texture p {
   margin: 4px 0 14px;
 }
 
+/*  
+  badges 항목을 항상 같은 위치에 놓기 위해 position 속성 absolute 설정 
+  상위에 header의 position 속성은 fixed로 스크롤에 영향 없이 고정 속성
+*/
 header .badges {
   position: absolute;
   top: 132px;
   right: 12px;
 }
 
+/*  
+  배너 이미지의 코너 부분을 둥글게 마감하기 위해 border-radius 값 설정
+  border-radius 설정 적용을 위한 overflow : hidden 설정
+  배너 위에 마우스 포인터 올리는 경우 pointer로 커서 변경
+*/
 header .badges .badge {
   border-radius: 10px;
   overflow: hidden;
